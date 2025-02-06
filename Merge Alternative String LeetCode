@@ -1,0 +1,40 @@
+let str1 = "AB"
+let str2 = "PQRS"
+
+//ABC && PQR --> APBQCR
+//ABCD && PQ --> APBQCD
+//AB && PQRS --> APBQRS
+
+
+
+
+console.log(str1Arr)
+console.log(str2Arr)
+
+let newString = [];
+
+let str1Arr = str1.split("");
+let str2Arr = str2.split("");
+
+let length1 = str1Arr.length
+let length2 = str2Arr.length
+
+if(length1 === length2) {
+    for(let i=0; i<length1; i++) {
+        newString.push(str1Arr[i])
+        newString.push(str2Arr[i])
+    }
+} else if(length1 > length2) {
+    for(let i=0; i<length1; i++) {
+        newString.push(str1Arr[i])
+        newString.push(str2Arr[i])
+    }
+    
+} else if(length2 > length1) {
+    for(let i=0; i<length2; i++) {
+        newString.push(str1Arr[i])
+        newString.push(str2Arr[i])
+    }
+}
+
+console.log(newString.join(""));
